@@ -1,10 +1,10 @@
 
-%define git g97962d2
+%define git gd2b7997
 
 Name:	 qtchooser
 Summary: Qt Chooser
-Version: 26
-Release: 3%{?dist}
+Version: 39
+Release: 1%{?dist}
 
 License: LGPLv2 or GPLv3
 URL:	 http://macieira.org/qtchooser
@@ -68,9 +68,12 @@ echo "%{_libdir}" >> %{buildroot}%{_sysconfdir}/xdg/qtchooser/5.conf
 %{_bindir}/qglinfo
 %{_bindir}/qhelpconverter
 %{_bindir}/qhelpgenerator
+%{_bindir}/qlalr
 %{_bindir}/qmake
+%{_bindir}/qml
 %{_bindir}/qml1plugindump
 %{_bindir}/qmlbundle
+%{_bindir}/qmlimportscanner
 %{_bindir}/qmlmin
 %{_bindir}/qmlplugindump
 %{_bindir}/qmlprofiler
@@ -78,10 +81,11 @@ echo "%{_libdir}" >> %{buildroot}%{_sysconfdir}/xdg/qtchooser/5.conf
 %{_bindir}/qmltestrunner
 %{_bindir}/qmlviewer
 %{_bindir}/qtconfig
+%{_bindir}/qtdiag
+%{_bindir}/qtpaths
 %{_bindir}/rcc
 %{_bindir}/uic
 %{_bindir}/uic3
 %{_bindir}/xmlpatterns
 %{_bindir}/xmlpatternsvalidator
-
-
+%{_mandir}/man1/qtchooser.1.gz
