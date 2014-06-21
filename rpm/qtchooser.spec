@@ -1,6 +1,3 @@
-
-%define git gd2b7997
-
 Name:	 qtchooser
 Summary: Qt Chooser
 Version: 39
@@ -8,7 +5,7 @@ Release: 1%{?dist}
 
 License: LGPLv2 or GPLv3
 URL:	 http://macieira.org/qtchooser
-Source0: http://macieira.org/qtchooser/qtchooser-%{version}-%{git}.tar.gz
+Source0: %{name}-%{version}.tar.xz
 Source1: macros.qmake
 Requires: qt-default
 
@@ -17,7 +14,7 @@ Requires: qt-default
 
 
 %prep
-%setup -q -n qtchooser-%{version}-%{git}
+%setup -q -n %{name}-%{version}/upstream
 
 
 %build
