@@ -4,7 +4,7 @@
 
 %qmake \
   export QT_SELECT=4; \\\
-  qmake -qt=4 -makefile \\\
+  %{_bindir}/qmake -qt=4 -makefile \\\
   "QMAKE_CFLAGS_RELEASE=${CFLAGS:-%optflags}" \\\
   "QMAKE_CFLAGS_DEBUG=${CFLAGS:-%optflags}" \\\
   "QMAKE_CXXFLAGS_RELEASE=${CXXFLAGS:-%optflags}" \\\
@@ -14,7 +14,7 @@
 
 %qmake5 \
   export QT_SELECT=5; \\\
-  qmake -qt=5 -makefile \\\
+  %{_bindir}/qmake -qt=5 -makefile \\\
   "QMAKE_CFLAGS_RELEASE=${CFLAGS:-%optflags}" \\\
   "QMAKE_CFLAGS_DEBUG=${CFLAGS:-%optflags}" \\\
   "QMAKE_CXXFLAGS_RELEASE=${CXXFLAGS:-%optflags}" \\\
