@@ -1,8 +1,7 @@
 Name:	 qtchooser
 Summary: Qt Chooser
 Version: 39
-Release: 1%{?dist}
-
+Release: 1
 License: LGPLv2 or GPLv3
 URL:	 http://macieira.org/qtchooser
 Source0: %{name}-%{version}.tar.xz
@@ -14,8 +13,7 @@ Requires: qt-default
 
 
 %prep
-%setup -q -n %{name}-%{version}/upstream
-
+%setup -q -n %{name}-%{version}
 
 %build
 make %{?_smp_mflags}
@@ -38,6 +36,7 @@ echo "%{_libdir}" >> %{buildroot}%{_sysconfdir}/xdg/qtchooser/5.conf
 ## env vars
 #QT_SELECT
 #QTCHOOSER_RUNTOOL
+
 
 %files
 %defattr(-,root,root,-)
