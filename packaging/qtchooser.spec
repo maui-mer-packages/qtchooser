@@ -6,6 +6,7 @@ License: LGPLv2 or GPLv3
 URL:	 http://macieira.org/qtchooser
 Source0: %{name}-%{version}.tar.xz
 Source1: macros.qmake
+Patch0:  qtchooser-git.patch
 Requires: qt-default
 
 %description
@@ -14,6 +15,9 @@ Requires: qt-default
 
 %prep
 %setup -q -n %{name}-%{version}
+
+%patch0 -p1
+
 
 %build
 make %{?_smp_mflags}
